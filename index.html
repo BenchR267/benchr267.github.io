@@ -1,6 +1,20 @@
 <html>
 <head>
 <style>
+
+:root {
+  --light: white;
+  --dark: black;
+}
+
+html {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: var(--dark);
+}
+
 .parent {
     position: relative;
 }
@@ -12,11 +26,27 @@
     
     text-align: left;
     font-family: Arial, Helvetica, monospace;
+    color: var(--light);
+}
+
+img { 
+   border:2px solid var(--light);
 }
 
 a {
-    color: black;
+    color: var(--light);
     font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+a:active {
+    color: var(--dark);
+    background-color: var(--light);
 }
 </style>
 </head>
@@ -31,7 +61,7 @@ a {
         I have a Master of Computer Science from the <a href="https://htw-dresden.de">HTW Dresden</a>.<br>
         Check out my <a href="https://blog.benchr.de/cv.pdf">CV</a> for all information about my career.<br>
         <br>
-        Feel free to contact me via <a href="mailto:mail@contact.benchr.de">e-mail</a>, <a href="https://twitter.com/BenchR">Twitter</a>, <a href="https://instagram.com/BenchR">Instagram</a> or <a href="http://linkedin.com/in/benchr267">LinkedIn</a>.<br>
+        Feel free to contact me via <a href="mailto:mail@contact.benchr.de">e-mail</a>, <a href="https://twitter.com/BenchR">Twitter</a>, <a href="https://github.com/BenchR267">Github</a>, <a href="https://instagram.com/BenchR">Instagram</a> or <a href="http://linkedin.com/in/benchr267">LinkedIn</a>.<br>
         If you're interested in my photography work, please check out my <a href="https://photo.benchr.de">portfolio</a>.
         </p>
     </div>
