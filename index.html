@@ -23,16 +23,17 @@ html {
 
 body {
     background-image: url('background.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    background-position: center center;
+    background-size: 100% 100%;
+    background-size: contain;
+    background-size: cover;
     margin: 0 0 0 0;
 }
 
 body.parent:before {
     content: "";
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: var(--dark);
     position: absolute;
     left: 0;
@@ -67,7 +68,8 @@ body.parent:before {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 400px;
+    height: auto;
 }
 
 a {
@@ -86,17 +88,19 @@ a:active {
     background-color: var(--light);
 }
 
-@media screen and (max-device-width: 640px){
-    .header {
-        width: 100%;
-    }
-
+@media only screen and (max-width: 640px) {
     .child {
         top: 10%;
-        left: 10%;
+        left: 5%;
         width: 90%;
         height: 100%;
         transform: none;
+    }
+    
+    .header {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -104,7 +108,7 @@ a:active {
 </head>
 <body class="parent">
     <div class="child">
-        <img class="header" src="header.jpg" style="width: 400px; height: 300px; border-radius: 25px;"/>
+        <img class="header" src="header.jpg" style="border-radius: 25px;"/>
         
         <div>
             <h2>Benjamin Herzog</h2>
