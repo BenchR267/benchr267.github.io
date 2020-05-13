@@ -26,6 +26,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    margin: 0 0 0 0;
 }
 
 body.parent:before {
@@ -59,7 +60,7 @@ body.parent:before {
     color: var(--dark);
 }
 
-img {
+.header {
     text-align: center;
     border:2px solid var(--light);
     
@@ -84,15 +85,30 @@ a:active {
     color: var(--dark);
     background-color: var(--light);
 }
+
+@media screen and (max-device-width: 640px){
+    .header {
+        width: 100%;
+    }
+
+    .child {
+        top: 10%;
+        left: 10%;
+        width: 90%;
+        height: 100%;
+        transform: none;
+    }
+}
+
 </style>
 </head>
 <body class="parent">
     <div class="child">
-        <img src="header.jpg" style="width: 400px; height: 300px; border-radius: 25px;"/>
+        <img class="header" src="header.jpg" style="width: 400px; height: 300px; border-radius: 25px;"/>
         
         <div>
-            <h1>Benjamin Herzog</h1>
-            <p><i>Software Engineer based in Berlin, Germany.</i></p>
+            <h2>Benjamin Herzog</h2>
+            <i>Software Engineer based in Berlin, Germany.</i>
             <p>
             I currently work at <a href="https://apple.com">Apple</a> on <a href="https://developer.apple.com">Xcode</a>.<br>
             Previously I worked on the <a href="https://lovoo.com">LOVOO</a> iOS app.<br>
