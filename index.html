@@ -7,6 +7,7 @@
     --light: black;
     --dark: white;
     --overlay-opacity: 0.75;
+    --content-weight: 500;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,6 +15,7 @@
         --light: white;
         --dark: black;
         --overlay-opacity: 0.5;
+        --content-weight: 500;
     }
 }
 
@@ -48,12 +50,8 @@ body.parent:before {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 400px;
+    width: 500px;
     transform: translate(-50%, -50%);
-    
-    text-align: block;
-    font-family: Arial, Helvetica, monospace;
-    color: var(--light);
 }
 
 .image:after {
@@ -68,13 +66,28 @@ body.parent:before {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 400px;
+    width: 500px;
     height: auto;
+}
+
+.content {
+    font-weight: var(--content-weight);
+    text-align: block;
+    font-family: Courier, monospace;
+    color: var(--light);
+}
+
+h1 {
+    margin-bottom: 2;
+}
+
+p {
+    font-size: 20;
 }
 
 a {
     color: var(--light);
-    font-weight: 600;
+    font-weight: 800;
     text-decoration: none;
 }
 
@@ -110,8 +123,8 @@ a:active {
     <div class="child">
         <img class="header" src="header.jpg" style="border-radius: 25px;"/>
         
-        <div>
-            <h2>Benjamin Herzog</h2>
+        <div class="content">
+            <h1>Benjamin Herzog</h1>
             <i>Software Engineer based in Berlin, Germany.</i>
             <p>
             I currently work at <a href="https://apple.com">Apple</a> on <a href="https://developer.apple.com">Xcode</a>.<br>
@@ -120,7 +133,12 @@ a:active {
             Check out my <a href="https://blog.benchr.de/cv.pdf">CV</a> for all information about my career.<br>
             <br>
             Feel free to contact me via <a href="mailto:mail@contact.benchr.de">e-mail</a>, <a href="https://twitter.com/BenchR">Twitter</a>, <a href="https://github.com/BenchR267">Github</a>, <a href="https://instagram.com/BenchR">Instagram</a> or <a href="http://linkedin.com/in/benchr267">LinkedIn</a>.<br>
-            If you're interested in my photography work, please check out my <a href="https://photo.benchr.de">portfolio</a>.
+            <br>
+            If you're interested in my photography work, please check out my <a href="https://photo.benchr.de">portfolio</a>. <br>
+            <br>
+            <center>
+            <a href="https://blog.benchr.de/imprint/">Imprint</a>
+            </center>
             </p>
         </div>
     </div>
