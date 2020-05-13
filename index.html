@@ -4,8 +4,17 @@
 
 :root {
     color-scheme: light dark;
-    --light: white;
-    --dark: black;
+    --light: black;
+    --dark: white;
+    --overlay-opacity: 0.75;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light: white;
+        --dark: black;
+        --overlay-opacity: 0.4;
+    }
 }
 
 html {
@@ -14,11 +23,20 @@ html {
 
 body {
     background-image: url('background.jpg');
-    background-color: rgba(var(--dark), 0.2);
-    background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+}
+
+body.parent:before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background: var(--dark);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: var(--overlay-opacity);
 }
 
 .parent {
@@ -71,17 +89,20 @@ a:active {
 <body class="parent">
     <div class="child">
         <img src="header.jpg" style="width: 400px; height: 300px; border-radius: 25px;"/>
-        <h1>Benjamin Herzog</h1>
-        <p><i>Software Engineer based in Berlin, Germany.</i></p>
-        <p>
-        I currently work at <a href="https://apple.com">Apple</a> on the <a href="https://developer.apple.com">Xcode</a> Build System.<br>
-        Before that, I worked at <a href="https://lovoo.com">LOVOO</a> on the iOS app.<br>
-        I have a Master of Science in CS from the <a href="https://htw-dresden.de">HTW Dresden</a>.<br>
-        Check out my <a href="https://blog.benchr.de/cv.pdf">CV</a> for all information about my career.<br>
-        <br>
-        Feel free to contact me via <a href="mailto:mail@contact.benchr.de">e-mail</a>, <a href="https://twitter.com/BenchR">Twitter</a>, <a href="https://github.com/BenchR267">Github</a>, <a href="https://instagram.com/BenchR">Instagram</a> or <a href="http://linkedin.com/in/benchr267">LinkedIn</a>.<br>
-        If you're interested in my photography work, please check out my <a href="https://photo.benchr.de">portfolio</a>.
-        </p>
+        
+        <div>
+            <h1>Benjamin Herzog</h1>
+            <p><i>Software Engineer based in Berlin, Germany.</i></p>
+            <p>
+            I currently work at <a href="https://apple.com">Apple</a> on <a href="https://developer.apple.com">Xcode</a>.<br>
+            Previously I worked on the <a href="https://lovoo.com">LOVOO</a> iOS app.<br>
+            I have a master's degree in CS from the <a href="https://htw-dresden.de">HTW Dresden</a>.<br>
+            Check out my <a href="https://blog.benchr.de/cv.pdf">CV</a> for all information about my career.<br>
+            <br>
+            Feel free to contact me via <a href="mailto:mail@contact.benchr.de">e-mail</a>, <a href="https://twitter.com/BenchR">Twitter</a>, <a href="https://github.com/BenchR267">Github</a>, <a href="https://instagram.com/BenchR">Instagram</a> or <a href="http://linkedin.com/in/benchr267">LinkedIn</a>.<br>
+            If you're interested in my photography work, please check out my <a href="https://photo.benchr.de">portfolio</a>.
+            </p>
+        </div>
     </div>
 </body>
 </html>
