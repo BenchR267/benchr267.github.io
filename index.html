@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 :root {
     color-scheme: light dark;
@@ -37,8 +38,8 @@ body {
     align-items: center;
     justify-content: center;
 
-    padding-top: 20;
-    padding-bottom: 20;
+    padding-top: 40;
+    padding-bottom: 40;
     margin: 0 0 0 0;
 }
 
@@ -103,6 +104,12 @@ a:active {
     color: var(--dark);
     background-color: var(--light);
 }
+
+@media only screen and (max-width: 640px) {
+     .container {
+        width: 98%;
+     }
+ }
 
 </style>
 </head>
