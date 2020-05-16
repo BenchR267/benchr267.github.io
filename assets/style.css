@@ -70,7 +70,7 @@ html, body {
     z-index: 3;
 
     font-weight: var(--content-weight);
-    text-align: block;
+    text-align: justify;
     font-family: Courier, monospace;
     line-height: 1.2;
     color: var(--light);
