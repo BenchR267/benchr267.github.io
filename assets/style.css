@@ -1,6 +1,6 @@
 :root {
     color-scheme: light dark;
-    --light: black;
+    --light: #181818;
     --dark: #d3d3d3;
     --overlay-opacity: 0.83;
     --content-weight: 500;
